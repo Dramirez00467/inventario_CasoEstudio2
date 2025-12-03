@@ -1,0 +1,91 @@
+﻿@{
+    ViewData["Title"] = "Consulta de Producto por ID";
+}
+
+<style>
+    .consulta-wrapper {
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .consulta-card {
+        max-width: 650px;
+        width: 100%;
+        border-radius: 1rem;
+        box-shadow: 0 0.5rem 1.25rem rgba(0,0,0,.08);
+        border: 1px solid #eef1f5;
+    }
+
+    .consulta-badge {
+        font-size: .85rem;
+        text-transform: uppercase;
+        letter-spacing: .08em;
+    }
+
+    #resultadoProducto table th {
+        width: 30%;
+        background-color: #f8f9fa;
+    }
+</style>
+
+<div class="container consulta-wrapper">
+    <div class="card consulta-card">
+        <div class="card-body">
+
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <div>
+                    <span class="badge bg-primary-subtle text-primary consulta-badge">
+                        Consulta rápida
+                    </span>
+                    <h2 class="h4 mt-2 mb-0">@ViewData["Title"]</h2>
+                    <p class="text-muted mb-0">
+                        Digite el ID del producto para ver su información detallada.
+                    </p>
+                </div>
+                <div class="text-end">
+                    <a href="/Productos/Index" class="btn btn-outline-secondary btn-sm">
+                        ← Volver al listado
+                    </a>
+                </div>
+            </div>
+
+            <hr />
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">
+                    ID
+                </span>
+                <input type="number" id="buscarIdProducto" class="form-control" placeholder="Ingrese el ID del producto">
+                <button class="btn btn-primary" id="btnBuscarProducto">Buscar</button>
+            </div>
+
+            <small class="text-muted d-block mb-2">
+                Ejemplo: 1, 2, 3...
+            </small>
+
+            <div id="resultadoProducto" style="display:none;">
+                <h5 class="mt-3 mb-2">Resultado</h5>
+                <div class="table-responsive">
+                    <table class="table table-bordered align-middle mb-0">
+                        <tbody>
+                            <tr><th>ID</th><td id="resIdProducto"></td></tr>
+                            <tr><th>Nombre</th><td id="resNombreProducto"></td></tr>
+                            <tr><th>Descripción</th><td id="resDescripcionProducto"></td></tr>
+                            <tr><th>Precio</th><td id="resPrecioProducto"></td></tr>
+                            <tr><th>Stock</th><td id="resStockProducto"></td></tr>
+                            <tr><th>Estado</th><td id="resDisponibleProducto"></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script src="~/js/Productos.js" asp-append-version="true"></script>
+}

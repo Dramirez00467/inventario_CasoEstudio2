@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    .modal-header-app {
+        background: #0d6efd; /* Azul Bootstrap primario */
+        color: #ffffff;
+    }
+
+        .modal-header-app .btn-close {
+            filter: invert(1); /* para que la X se vea blanca sobre el fondo azul */
+        }
+
+    .modal-title {
+
+        font-size: 1.05rem;
+        font-weight: 600;
+    }
+
+    .menu-wrapper {
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .menu-card {
+        padding: 2rem;
+        border-radius: 1rem;
+        text-align: center;
+        box-shadow: 0 0.45rem 1.2rem rgba(0,0,0,0.08);
+        border: 1px solid #e5e7eb;
+        transition: transform .2s ease, box-shadow .2s ease;
+        cursor: pointer;
+        background-color: #ffffff;
+    }
+
+    .menu-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0.6rem 1.5rem rgba(0,0,0,0.12);
+    }
+
+    .menu-title {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: .5rem;
+        color: #0d6efd;
+    }
+
+    .menu-description {
+        font-size: 0.95rem;
+        color: #6b7280;
+        margin-bottom: 1.5rem;
+    }
+
+    .menu-btn {
+        display: inline-block;
+        padding: .55rem 1.5rem;
+        border-radius: .5rem;
+        background-color: #0d6efd;
+        color: #ffffff !important;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .menu-btn:hover {
+        background-color: #0b5ed7;
+        color: #ffffff !important;
+    }
+</style>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Inventario</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ProyectoInventario.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ProyectoInventario</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Productos" asp-action="Index">Productos</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Ordenes" asp-action="Index">Ordenes</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2025 - ProyectoEstudiantes - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.datatables.net/v/bs5/jq-3.7.0/jszip-3.10.1/dt-2.3.4/b-3.2.5/b-colvis-3.2.5/b-html5-3.2.5/datatables.min.css" rel="stylesheet" integrity="sha384-xAeaImhyZ4CNV1+mr1s1dJCbvqROptOcQudNZy11YBBdeV7q9yA+0nbVBXSNU+k2" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js" integrity="sha384-VFQrHzqBh5qiJIU0uGU5CIW3+OWpdGGJM9LBnGbuIH2mkICcFZ7lPd/AAtI7SNf7" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js" integrity="sha384-/RlQG9uf0M2vcTw3CX7fbqgbj/h8wKxw7C3zu9/GxcBPRKOEcESxaxufwRXqzq6n" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/v/bs5/jq-3.7.0/jszip-3.10.1/dt-2.3.4/b-3.2.5/b-colvis-3.2.5/b-html5-3.2.5/datatables.min.js" integrity="sha384-PTw3tblnkbZeYGIf3jX89e8GYKuQ+qiacKJyJIJhNBkjxku/+owPUFEtoysbyIUl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

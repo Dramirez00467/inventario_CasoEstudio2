@@ -1,0 +1,80 @@
+﻿@using ProyectoInventarioBLL.Dtos
+@model List<OrdenDto>
+
+@{
+    ViewData["Title"] = "Órdenes";
+}
+
+<style>
+    .ordenes-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1rem;
+        align-items: center;
+        margin-bottom: 1.5rem;
+    }
+
+        .ordenes-header h1 {
+            margin-bottom: 0;
+        }
+
+    .ordenes-card {
+        border-radius: 1rem;
+        box-shadow: 0 0.5rem 1.25rem rgba(0,0,0,.05);
+        border: 1px solid #eef1f5;
+    }
+</style>
+
+<div class="container mt-4">
+
+    <div class="ordenes-header">
+        <div>
+            <h1 class="h3 mb-1">@ViewData["Title"]</h1>
+            <p class="text-muted mb-0">
+                Administración de órdenes registradas en el sistema.
+            </p>
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+            <button type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalCrearOrden">
+                + Crear Nueva Orden
+            </button>
+
+            <a href="/Ordenes/ConsultaPorId" class="btn btn-outline-info">
+                Consultar Orden por ID
+            </a>
+        </div>
+    </div>
+
+    <div class="card ordenes-card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped align-middle mb-0" id="tablaOrdenes">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Id</th>
+                            <th>Producto</th> @* antes: Producto Id *@
+                            <th>Cantidad</th>
+                            <th>Fecha</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@await Html.PartialAsync("Create")
+@await Html.PartialAsync("Edit")
+@await Html.PartialAsync("Details")
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script src="~/js/Ordenes.js" asp-append-version="true"></script>
+}

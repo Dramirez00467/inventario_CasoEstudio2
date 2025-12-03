@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Menú Principal";
+}
+
+<div class="menu-wrapper">
+    <div class="menu-container">
+
+        <div class="menu-card" onclick="location.href='/Productos/Index'">
+            <div class="menu-title">Productos</div>
+            <div class="menu-description">
+                Administrar lista de productos, stock y disponibilidad.
+            </div>
+            <a href="/Productos/Index" class="menu-btn">Ir a Productos</a>
+        </div>
+
+        <div class="menu-card" onclick="location.href='/Ordenes/Index'">
+            <div class="menu-title">Órdenes</div>
+            <div class="menu-description">
+                Crear nuevas órdenes y consultar su estado.
+            </div>
+            <a href="/Ordenes/Index" class="menu-btn">Ir a Órdenes</a>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,82 @@
+﻿@using ProyectoInventarioBLL.Dtos
+@model List<ProductoDto>
+
+@{
+    ViewData["Title"] = "Productos";
+}
+
+<style>
+    .productos-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1rem;
+        align-items: center;
+        margin-bottom: 1.5rem;
+    }
+
+        .productos-header h1 {
+            margin-bottom: 0;
+        }
+
+    .productos-card {
+        border-radius: 1rem;
+        box-shadow: 0 0.5rem 1.25rem rgba(0,0,0,.05);
+        border: 1px solid #eef1f5;
+    }
+</style>
+
+<div class="container mt-4">
+
+    <div class="productos-header">
+        <div>
+            <h1 class="h3 mb-1">@ViewData["Title"]</h1>
+            <p class="text-muted mb-0">
+                Administración de productos registrados en el sistema.
+            </p>
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+            <button type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalCrearProducto">
+                + Crear Nuevo Producto
+            </button>
+
+            <a href="/Productos/ConsultaPorId" class="btn btn-outline-info">
+                Consultar Producto por ID
+            </a>
+        </div>
+    </div>
+
+    <div class="card productos-card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped align-middle mb-0" id="tablaProductos">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Id</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Precio</th>
+                            <th>Stock</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@await Html.PartialAsync("Create")
+@await Html.PartialAsync("Edit")
+@await Html.PartialAsync("Stock")
+@await Html.PartialAsync("Details")
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script src="~/js/Productos.js" asp-append-version="true"></script>
+}

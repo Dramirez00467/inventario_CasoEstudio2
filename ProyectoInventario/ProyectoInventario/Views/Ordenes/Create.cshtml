@@ -1,0 +1,55 @@
+﻿@model ProyectoInventarioBLL.Dtos.OrdenDto
+
+<!-- Modal Crear Orden -->
+<div class="modal fade" id="modalCrearOrden" tabindex="-1" aria-labelledby="modalCrearOrdenLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header modal-header-app">
+                <h5 class="modal-title" id="modalCrearOrdenLabel">Crear Orden</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+
+            <div class="modal-body">
+                <p class="text-muted small mb-3">
+                    Complete la información de la orden y presione <strong>Guardar</strong> para registrarla.
+                </p>
+
+                <form id="formCrearOrden" asp-controller="Ordenes" asp-action="CrearOrden" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-2"></div>
+
+                    <div class="mb-3">
+                        <label asp-for="ProductoId" class="form-label">Producto</label>
+                        <select asp-for="ProductoId" class="form-select" id="ProductoId">
+                            <!-- Se llena desde JS con la lista de productos -->
+                        </select>
+                        <span asp-validation-for="ProductoId" class="text-danger small"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Cantidad" class="form-label"></label>
+                        <input asp-for="Cantidad" class="form-control" placeholder="Cantidad" />
+                        <span asp-validation-for="Cantidad" class="text-danger small"></span>
+                    </div>
+
+                    <div class="mb-0">
+                        <label asp-for="Estado" class="form-label">Estado</label>
+                        <select asp-for="Estado" class="form-select" id="Estado">
+                            <option value="Activa">Activa</option>
+                            <option value="Cancelada">Cancelada</option>
+                        </select>
+                        <span asp-validation-for="Estado" class="text-danger small"></span>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light border" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" id="btnGuardarOrden">
+                    Guardar
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>

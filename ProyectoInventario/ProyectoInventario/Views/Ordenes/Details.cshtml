@@ -1,0 +1,46 @@
+﻿<!-- Modal Detalle Orden -->
+<div class="modal fade" id="modalDetalleOrden" tabindex="-1" aria-labelledby="modalDetalleOrdenLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+
+            <div class="modal-header modal-header-app">
+                <h5 class="modal-title" id="modalDetalleOrdenLabel">Detalle de la Orden</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered align-middle mb-0">
+                        <tbody>
+                            <tr>
+                                <th style="width:30%;">ID</th>
+                                <td id="detOrdId"></td>
+                            </tr>
+                            <tr>
+                                <th>Producto</th>
+                                <td id="detOrdProducto"></td>
+                            </tr>
+                            <tr>
+                                <th>Cantidad</th>
+                                <td id="detOrdCantidad"></td>
+                            </tr>
+                            <tr>
+                                <th>Fecha</th>
+                                <td id="detOrdFecha"></td>
+                            </tr>
+                            <tr>
+                                <th>Estado</th>
+                                <td id="detOrdEstado"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light border" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+﻿<!-- Modal Actualizar Stock -->
+<div class="modal fade" id="modalStockProducto" tabindex="-1" aria-labelledby="modalStockProductoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content">
+
+            <div class="modal-header modal-header-app">
+                <h5 class="modal-title" id="modalStockProductoLabel">Actualizar Stock</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+
+            <div class="modal-body">
+                <p class="text-muted small mb-3">
+                    Ingrese la cantidad a modificar y seleccione si desea <strong>agregar</strong> o <strong>restar</strong> del stock actual.
+                </p>
+
+                <div class="mb-3">
+                    <label for="CantidadStock" class="form-label">Cantidad</label>
+                    <input type="number" id="CantidadStock" class="form-control" placeholder="Ejemplo: 5" />
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light border" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-danger" id="btnRestarStock">Restar</button>
+                <button type="button" class="btn btn-success" id="btnSumarStock">Agregar</button>
+            </div>
+
+        </div>
+    </div>
+</div>
