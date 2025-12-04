@@ -27,7 +27,7 @@ namespace ProyectoInventarioDAL.Repositorios
                 "application/json"
             );
 
-            var response = await _httpClient.PostAsync("https://localhost:7288/Ordenes", informacion);
+            var response = await _httpClient.PostAsync("https://localhost:7286/Ordenes", informacion);
 
             return response.IsSuccessStatusCode;
         }
@@ -40,7 +40,7 @@ namespace ProyectoInventarioDAL.Repositorios
                    "application/json"
                );
 
-            var url = $"https://localhost:7288/Ordenes/{id}/cancelar";
+            var url = $"https://localhost:7286/Ordenes/{id}/cancelar";
 
             var response = await _httpClient.PutAsync(url, informacion);
 
@@ -50,7 +50,7 @@ namespace ProyectoInventarioDAL.Repositorios
         public async Task<Orden> ObtenerOrdenPorIdAsync(int id)
         {
             var response = await _httpClient
-                .GetFromJsonAsync<RespuestaApiInventario<Orden>>($"https://localhost:7288/Ordenes/{id}");
+                .GetFromJsonAsync<RespuestaApiInventario<Orden>>($"https://localhost:7286/Ordenes/{id}");
 
             return response?.Data;
         }
@@ -58,7 +58,7 @@ namespace ProyectoInventarioDAL.Repositorios
         public async Task<List<Orden>> ObtenerOrdenesAsync()
         {
             var response = await _httpClient
-                .GetFromJsonAsync<RespuestaApiInventario<List<Orden>>>("https://localhost:7288/Ordenes");
+                .GetFromJsonAsync<RespuestaApiInventario<List<Orden>>>("https://localhost:7286/Ordenes");
 
             return response?.Data ?? new List<Orden>();
         }
