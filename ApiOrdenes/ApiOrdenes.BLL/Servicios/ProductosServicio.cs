@@ -35,7 +35,6 @@ namespace ApiOrdenes.BLL.Servicios
             var resultado = await response.Content
                 .ReadFromJsonAsync<CustomResponse<bool>>();
 
-            // Si vino nulo, devolvemos error amigable
             return resultado ?? new CustomResponse<bool>
             {
                 EsError = true,
@@ -48,7 +47,7 @@ namespace ApiOrdenes.BLL.Servicios
         {
             var response = await _httpClient.PutAsync(
                 $"Productos/{idProducto}/stock?cantidad={cantidad}",
-                null); // cuerpo vacío
+                null);
 
             if (!response.IsSuccessStatusCode)
             {

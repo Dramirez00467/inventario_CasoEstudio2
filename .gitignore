@@ -10,3 +10,5 @@
 /ProyectoInventario/ProyectoInventarioBLL/bin
 /ProyectoInventario/ProyectoInventarioDAL/bin
 /ProyectoInventario/ProyectoInventario/wwwroot/lib
+/ApiOrdenes/.vs
+/ApiOrdenes/ApiOrdenes.BLL/obj
