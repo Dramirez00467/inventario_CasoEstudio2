@@ -1,0 +1,15 @@
+C:\Users\Diana\Downloads\2025\3 Cuatrimestre\Programación Web Avanzada\Casos de estudio\Caso de estudio 2\ApiOrdenes\ApiOrdenes.BLL\bin\Debug\net8.0\ApiOrdenes.BLL.deps.json
+C:\Users\Diana\Downloads\2025\3 Cuatrimestre\Programación Web Avanzada\Casos de estudio\Caso de estudio 2\ApiOrdenes\ApiOrdenes.BLL\bin\Debug\net8.0\ApiOrdenes.BLL.dll
+C:\Users\Diana\Downloads\2025\3 Cuatrimestre\Programación Web Avanzada\Casos de estudio\Caso de estudio 2\ApiOrdenes\ApiOrdenes.BLL\bin\Debug\net8.0\ApiOrdenes.BLL.pdb
+C:\Users\Diana\Downloads\2025\3 Cuatrimestre\Programación Web Avanzada\Casos de estudio\Caso de estudio 2\ApiOrdenes\ApiOrdenes.BLL\bin\Debug\net8.0\ApiOrdenes.DLL.dll
+C:\Users\Diana\Downloads\2025\3 Cuatrimestre\Programación Web Avanzada\Casos de estudio\Caso de estudio 2\ApiOrdenes\ApiOrdenes.BLL\bin\Debug\net8.0\ApiOrdenes.DLL.pdb
+C:\Users\Diana\Downloads\2025\3 Cuatrimestre\Programación Web Avanzada\Casos de estudio\Caso de estudio 2\ApiOrdenes\ApiOrdenes.BLL\obj\Debug\net8.0\ApiOrdenes.BLL.csproj.AssemblyReference.cache
+C:\Users\Diana\Downloads\2025\3 Cuatrimestre\Programación Web Avanzada\Casos de estudio\Caso de estudio 2\ApiOrdenes\ApiOrdenes.BLL\obj\Debug\net8.0\ApiOrdenes.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Diana\Downloads\2025\3 Cuatrimestre\Programación Web Avanzada\Casos de estudio\Caso de estudio 2\ApiOrdenes\ApiOrdenes.BLL\obj\Debug\net8.0\ApiOrdenes.BLL.AssemblyInfoInputs.cache
+C:\Users\Diana\Downloads\2025\3 Cuatrimestre\Programación Web Avanzada\Casos de estudio\Caso de estudio 2\ApiOrdenes\ApiOrdenes.BLL\obj\Debug\net8.0\ApiOrdenes.BLL.AssemblyInfo.cs
+C:\Users\Diana\Downloads\2025\3 Cuatrimestre\Programación Web Avanzada\Casos de estudio\Caso de estudio 2\ApiOrdenes\ApiOrdenes.BLL\obj\Debug\net8.0\ApiOrdenes.BLL.csproj.CoreCompileInputs.cache
+C:\Users\Diana\Downloads\2025\3 Cuatrimestre\Programación Web Avanzada\Casos de estudio\Caso de estudio 2\ApiOrdenes\ApiOrdenes.BLL\obj\Debug\net8.0\ApiOrden.5751CDEB.Up2Date
+C:\Users\Diana\Downloads\2025\3 Cuatrimestre\Programación Web Avanzada\Casos de estudio\Caso de estudio 2\ApiOrdenes\ApiOrdenes.BLL\obj\Debug\net8.0\ApiOrdenes.BLL.dll
+C:\Users\Diana\Downloads\2025\3 Cuatrimestre\Programación Web Avanzada\Casos de estudio\Caso de estudio 2\ApiOrdenes\ApiOrdenes.BLL\obj\Debug\net8.0\refint\ApiOrdenes.BLL.dll
+C:\Users\Diana\Downloads\2025\3 Cuatrimestre\Programación Web Avanzada\Casos de estudio\Caso de estudio 2\ApiOrdenes\ApiOrdenes.BLL\obj\Debug\net8.0\ApiOrdenes.BLL.pdb
+C:\Users\Diana\Downloads\2025\3 Cuatrimestre\Programación Web Avanzada\Casos de estudio\Caso de estudio 2\ApiOrdenes\ApiOrdenes.BLL\obj\Debug\net8.0\ref\ApiOrdenes.BLL.dll
